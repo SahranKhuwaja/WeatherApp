@@ -12,6 +12,7 @@ hbs.registerPartials(path.join(__dirname,'../templates/partials'));
 
 app.use(express.static(path.join(__dirname, '../public')));
 
+const port = process.env.PORT || 3000;
 
 
 app.get('',(req,res)=>{
@@ -136,7 +137,7 @@ app.get('*' ,(req,res)=>{
 
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
 console.log('Server is running!');
 
